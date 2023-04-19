@@ -1,0 +1,84 @@
+* {
+  font-family: "Raleway", sans-serif;
+}
+
+html {
+  height: 100%;
+  background-color: royalblue;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  text-align: center;
+}
+
+h3 {
+  height: 10%;
+}
+
+.player {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100%;
+  width: 15%;
+  background-color: dodgerblue;
+}
+
+.game-type {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 60%;
+  font-size: 30px;
+  color: rgb(221, 220, 218);
+  background-color: dodgerblue;
+}
+
+.game-title {
+  margin: 2px;
+}
+.classic {
+  height: 30%;
+}
+
+.advanced {
+  margin-top: 15px;
+  height: 50%;
+}
+.rule-box-classic,
+.rule-box-advanced {
+  display: flex;
+  align-content: center;
+  text-align: justify;
+  justify-content: center;
+  margin: 2px;
+}
+
+.rule-box-classic {
+  height: 25%;
+}
+
+.rule-box-advanced {
+  height: 16.7%;
+}
+
+.picture {
+  height: 50%;
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.player {
+}
