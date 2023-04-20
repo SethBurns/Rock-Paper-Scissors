@@ -76,16 +76,14 @@ changeGame.addEventListener('click', function () {
 
 gameBoard.addEventListener('click', function (event) {
   var playerChoice;
-  if (event.target.classList.contains('boulder')) {
-    console.log('boulder');
-    playerChoice = 'boulder';
+  for (var i = 0; i < game.options.length; i++) {
+    if (event.target.classList.contains(game.options[i])) {
+      playerChoice = game.options[i];
+    }
   }
-  if (event.target.classList.contains('parchment')) {
-    playerChoice = 'parchment';
-  }
-  if (event.target.classList.contains('shears')) {
-    playerChoice = 'shears';
-  }
+  takeTurn(playerChoice);
+  updatePlayers();
+  console.log(game)
 });
 
 // Conjunction Junction, What's Your... //
@@ -149,7 +147,20 @@ function checkWhoWon(playerChoice, computerChoice) {
   }
 }
 
-function changeAvatar() {
+function updatePlayers() {
   if (game.players[0].wins === game.players[1].wins) {
+    game.players[0].avatar = './assets/straightface.png'
+  } else if (game.players[0].wins < game.players[1].wins) {
+    game.players[0].avatar = './assets/sadface.png'
+  } else {
+    game.players[0].avatar = './assets/smileyface.png'
   }
+    playerInfo.innerHTML = `
+  <img src='${game.players[0].avatar}' alt="Player Avatar" class="avatar" />
+  <h2>${game.players[0].name}</h2>
+  <p class="player-wins">Wins: ${game.players[0].wins}</p>`;
+  computerInfo.innerHTML = `
+  <img src='${game.players[1].avatar}' alt="Player Avatar" class="avatar" />
+  <h2>${game.players[1].name}</h2>
+  <p class="player-wins">Wins: ${game.players[1].wins}</p>`;
 }
