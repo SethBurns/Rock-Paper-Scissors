@@ -13,67 +13,81 @@
   </head>
   <body>
     <section class="player-1 player">
-      <h2>Player</h2>
-      <p></p>
     </section>
     <main class="game-area">
       <h1>Boulder, Parchment, Shears</h1>
-      <h2 class="screen-title"></h2>
-      <section class="game-type classic">
+      <h2 class="screen-title">SELECT YOUR GAME</h2>
+      <section class="game-type classic hover">
         <p class="game-title">Classic</p>
         <article class="rule-box-classic">
-          <img src="./assets/Boulder.png" alt="Big Boulder" />
-          <img src="./assets/Greaterthan.png" alt="Beats" class="picture" />
-          <img src="./assets/Shears.png" alt="Cutting Shears" />
+          <img src="./assets/boulder.png" alt="Big Boulder" class="boulder" />
+          <img src="./assets/greaterthan.png" alt="Beats" class="picture" />
+          <img src="./assets/shears.png" alt="Cutting Shears" class="shears" />
         </article>
         <article class="rule-box-classic">
-          <img src="./assets/Parchment.png" alt="Parchment Paper" />
-          <img src="./assets/Greaterthan.png" alt="Beats" class="picture" />
-          <img src="./assets/Boulder.png" alt="Big Boulder" />
+          <img src="./assets/parchment.png" alt="Parchment Paper" class="parchment" />
+          <img src="./assets/greaterthan.png" alt="Beats" class="picture" />
+          <img src="./assets/boulder.png" alt="Big Boulder" class="boulder" />
         </article>
         <article class="rule-box-classic">
-          <img src="./assets/Shears.png" alt="Cutting Shears" />
-          <img src="./assets/Greaterthan.png" alt="Beats" class="picture" />
-          <img src="./assets/Parchment.png" alt="Parchment Paper" />
+          <img src="./assets/shears.png" alt="Cutting Shears" class="shears" />
+          <img src="./assets/greaterthan.png" alt="Beats" class="picture" />
+          <img src="./assets/parchment.png" alt="Parchment Paper" class="parchment" />
         </article>
       </section>
-      <section class="game-type advanced">
+      <section class="game-type advanced hover">
         <p class="game-title">Advanced</p>
         <article class="rule-box-advanced">
-          <img src="./assets/Boulder.png" alt="Big Boulder" />
-          <img src="./assets/Greaterthan.png" alt="Beats" class="picture" />
-          <img src="./assets/Shears.png" alt="Cutting Shears" />
-          <img src="./assets/Dragon.png" alt="Dragon" />
+          <img src="./assets/boulder.png" alt="Big Boulder" class="boulder" />
+          <img src="./assets/greaterthan.png" alt="Beats" class="picture" />
+          <img src="./assets/shears.png" alt="Cutting Shears" class="shears" />
+          <img src="./assets/dragon.png" alt="Dragon" class="dragon" />
         </article>
         <article class="rule-box-advanced">
-          <img src="./assets/Parchment.png" alt="Parchment Paper" />
-          <img src="./assets/Greaterthan.png" alt="Beats" class="picture" />
-          <img src="./assets/Boulder.png" alt="Big Boulder" />
-          <img src="./assets/Wizard.png" alt="Wizard" />
+          <img src="./assets/parchment.png" alt="Parchment Paper" class="parchment" />
+          <img src="./assets/greaterthan.png" alt="Beats" class="picture" />
+          <img src="./assets/boulder.png" alt="Big Boulder" class="boulder" />
+          <img src="./assets/wizard.png" alt="Wizard" class="wizard" />
         </article>
         <article class="rule-box-advanced">
-          <img src="./assets/Shears.png" alt="Cutting Shears" />
-          <img src="./assets/Greaterthan.png" alt="Beats" class="picture" />
-          <img src="./assets/Parchment.png" alt="Parchment Paper" />
-          <img src="./assets/Dragon.png" alt="Dragon" />
+          <img src="./assets/shears.png" alt="Cutting Shears" class="shears" />
+          <img src="./assets/greaterthan.png" alt="Beats" class="picture" />
+          <img src="./assets/parchment.png" alt="Parchment Paper" class="parchment" />
+          <img src="./assets/dragon.png" alt="Dragon" class="dragon" />
         </article>
         <article class="rule-box-advanced">
-          <img src="./assets/Dragon.png" alt="Dragon" />
-          <img src="./assets/Greaterthan.png" alt="Beats" class="picture" />
-          <img src="./assets/Wizard.png" alt="Wizard" />
-          <img src="./assets/Parchment.png" alt="Parchment Paper" />
+          <img src="./assets/dragon.png" alt="Dragon" class="dragon" />
+          <img src="./assets/greaterthan.png" alt="Beats" class="picture" />
+          <img src="./assets/wizard.png" alt="Wizard" class="wizard" />
+          <img src="./assets/parchment.png" alt="Parchment Paper" class="parchment" />
         </article>
         <article class="rule-box-advanced">
-          <img src="./assets/Wizard.png" alt="Wizard" />
-          <img src="./assets/Greaterthan.png" alt="Beats" class="picture" />
-          <img src="./assets/Boulder.png" alt="Big Boulder" />
-          <img src="./assets/Shears.png" alt="Cutting Shears" />
+          <img src="./assets/wizard.png" alt="Wizard" class="wizard" />
+          <img src="./assets/greaterthan.png" alt="Beats" class="picture" />
+          <img src="./assets/boulder.png" alt="Big Boulder" class="boulder" />
+          <img src="./assets/shears.png" alt="Cutting Shears" class="shears" />
         </article>
       </section>
+      <h2 class="choose-your-weapon hidden">CHOOSE YOUR WEAPON!</h2>
+      <section class="choice-display hidden">
+        <h2>Who Will Win?</h2>
+      </section>
+      <section class="classic-game hidden">
+        <img src="./assets/boulder.png" alt="Big Boulder" class="boulder hover" />
+        <img src="./assets/parchment.png" alt="Parchment Paper" class="parchment hover" />
+        <img src="./assets/shears.png" alt="Cutting Shears" class="shears hover" />
+      </section>
+      <section class="advanced-game hidden">
+        <img src="./assets/boulder.png" alt="Big Boulder" class="boulder hover" />
+        <img src="./assets/parchment.png" alt="Parchment Paper" class="parchment hover" />
+        <img src="./assets/shears.png" alt="Cutting Shears" class="shears hover" />
+        <img src="./assets/dragon.png" alt="Dragon" class="dragon hover" />
+        <img src="./assets/wizard.png" alt="Wizard" class="wizard hover" />
+      </section>
+      <button class="change-game hidden hover">Change Game</button>
     </main>
     <section class="computer-player player">
-      <h2>Computer</h2>
-      <p>Wins: 0</p>
     </section>
+    <script src="./main.js"></script>
   </body>
 </html>
