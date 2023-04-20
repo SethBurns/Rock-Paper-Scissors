@@ -1,11 +1,18 @@
 // Data Model //
 var game = {};
 
-// Event Listeners //
+// Query Selectors //
 var classic = document.querySelector('.classic')
 var advanced = document.querySelector('.advanced')
+var gameArea = document.querySelector('.game-area')
 
-
+// Event Listeners //
+gameArea.addEventListener('click', function(event) {
+  var target = event.target
+  if (target.classList.contains('classic')) {
+    console.log(target.classList)
+  }
+})
 
 function createPlayer(name, token) {
   var player = {

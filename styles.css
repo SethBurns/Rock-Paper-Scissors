@@ -80,5 +80,20 @@ h3 {
   padding-right: 20px;
 }
 
-.player {
+.classic-game,
+.advanced-game {
+  display: flex;
+  justify-content: center;
+}
+
+.classic-game {
+  height: 30%;
+}
+
+.advanced-game {
+  height: 20%
+}
+
+.hidden {
+  display: none;
 }
