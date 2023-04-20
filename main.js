@@ -1,33 +1,83 @@
 // Data Model //
-var game = {};
+var game = {
+  players: [],
+};
 
 // Query Selectors //
-var classic = document.querySelector('.classic')
-var advanced = document.querySelector('.advanced')
-var gameArea = document.querySelector('.game-area')
+var playerInfo = document.querySelector(".player-1");
+var computerInfo = document.querySelector(".computer-player");
+var classicChoice = document.querySelector(".classic");
+var advancedChoice = document.querySelector(".advanced");
+var gameArea = document.querySelector(".game-area");
+var playerAvatar = document.querySelector(".player-1");
+var selectGame = document.querySelector(".screen-title");
+var classicGame = document.querySelector(".classic-game");
+var advancedGame = document.querySelector(".advanced-game");
+var chooseWeapon = document.querySelector(".choose-your-weapon");
+var choiceDisplay = document.querySelector(".choice-display");
+var changeGame = document.querySelector(".change-game");
 
 // Event Listeners //
-gameArea.addEventListener('click', function(event) {
-  var target = event.target
-  if (target.classList.contains('classic')) {
-    console.log(target.classList)
+window.addEventListener("load", function () {
+  createPlayer("Human", "./assets/straightface.png");
+  createPlayer("Computer", "./assets/computer.png");
+  playerInfo.innerHTML = `<img src='${game.players[0].avatar}' alt="Player Avatar" class="avatar" />
+  <h2>${game.players[0].name}</h2>
+  <p class="player-wins">Wins: ${game.players[0].wins}</p>`;
+  computerInfo.innerHTML = `<img src='${game.players[1].avatar}' alt="Player Avatar" class="avatar" />
+  <h2>${game.players[1].name}</h2>
+  <p class="player-wins">Wins: ${game.players[1].wins}</p>`;
+  console.log(game);
+});
+
+classicChoice.addEventListener("click", function () {
+  hide(advancedChoice);
+  hide(classicChoice);
+  hide(selectGame);
+  show(chooseWeapon);
+  show(classicGame);
+  show(choiceDisplay);
+  show(changeGame);
+  createGame("classic");
+  console.log(game);
+});
+
+advancedChoice.addEventListener("click", function () {
+  hide(advancedChoice);
+  hide(classicChoice);
+  hide(selectGame);
+  show(chooseWeapon);
+  show(advancedGame);
+  show(choiceDisplay);
+  show(changeGame);
+  createGame("advanced");
+});
+
+classicGame.addEventListener("click", function (event) {
+  if (event.target.classList.contains("boulder")) {
+    console.log("clicked boulder");
   }
-})
+});
+
+// Conjunction Junction, What's Your... //
+
+function hide(element) {
+  element.classList.add("hidden");
+}
+
+function show(element) {
+  element.classList.remove("hidden");
+}
 
 function createPlayer(name, token) {
-  var player = {
+  game.players.push({
     name: name,
-    token: token,
-    // wins: 0,
-  };
-  return player;
+    avatar: token,
+    wins: 0,
+  });
 }
 
 function createGame(gameChoice) {
-  game.players = [
-    createPlayer("Human", "./assets/straightface.png"),
-    createPlayer("Computer", "./assets/computer.png"),
-  ];
   game.gameChoice = gameChoice;
   if (game.gameChoice === "classic") {
     game.options = ["shears", "parchment", "boulder"];
@@ -67,5 +117,10 @@ function checkWhoWon(playerChoice, computerChoice) {
   } else {
     game.players[1].wins++;
     return `You lose, ${computerChoice} beats ${playerChoice}.`;
+  }
+}
+
+function changeAvatar() {
+  if (game.players[0].wins === game.players[1].wins) {
   }
 }

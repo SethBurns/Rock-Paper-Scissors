@@ -30,6 +30,7 @@ h3 {
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  align-items: center;
   height: 100%;
   width: 15%;
   background-color: dodgerblue;
@@ -45,17 +46,21 @@ h3 {
   background-color: dodgerblue;
 }
 
-.game-title {
-  margin: 2px;
-}
 .classic {
   height: 30%;
+  border-radius: 20px;
 }
 
 .advanced {
   margin-top: 15px;
   height: 50%;
+  border-radius: 20px;
 }
+
+.game-title {
+  margin: 2px;
+}
+
 .rule-box-classic,
 .rule-box-advanced {
   display: flex;
@@ -80,18 +85,55 @@ h3 {
   padding-right: 20px;
 }
 
+.avatar {
+  height: 50px;
+  width: 50px;
+}
+
 .classic-game,
-.advanced-game {
+.advanced-game,
+.choose-display {
   display: flex;
   justify-content: center;
 }
 
+.choice-display {
+  height: 30%;
+  width: 60%;
+  margin: 10px;
+}
+
 .classic-game {
   height: 30%;
+  width: 70%;
 }
 
 .advanced-game {
-  height: 20%
+  height: 20%;
+  width: 70%;
+}
+
+.boulder,
+.parchment,
+.shears,
+.dragon,
+.wizard {
+  background-color: rgba(232, 162, 11, 0.2);
+  border-radius: 10px;
+  margin: 2px;
+}
+
+.change-game {
+  background-color: chocolate;
+  font-size: 30px;
+  margin: 20px;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+}
+
+.hover:hover {
+  transform: scale(1.02);
 }
 
 .hidden {
