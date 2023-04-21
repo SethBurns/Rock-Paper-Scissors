@@ -99,6 +99,7 @@ h3 {
   display: flex;
   justify-content: center;
   height: 30%;
+  width: 70%;
 }
 
 .classic-game,
@@ -109,19 +110,37 @@ h3 {
 }
 
 .choice-display {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
   height: 30%;
-  width: 60%;
+  width: 70%;
   margin: 10px;
+}
+
+.current-match {
+  display: flex;
+  justify-content: center;
+  height: 70%;
+  width: 100%;
 }
 
 .classic-game,
 .advanced-game {
   height: 100%;
-  width: 70%;
+  width: 45%;
 }
 
 .advanced-game {
   height: 70%;
+}
+
+.classic:hover {
+  background-color:rgb(8, 72, 38)
+}
+
+.advanced:hover {
+  background-color: rgb(96, 32, 32);
 }
 
 .boulder,
