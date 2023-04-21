@@ -9,7 +9,6 @@ var computerInfo = document.querySelector('.computer-player');
 var classicChoice = document.querySelector('.classic');
 var advancedChoice = document.querySelector('.advanced');
 var gameArea = document.querySelector('.game-area');
-var playerAvatar = document.querySelector('.player-1');
 var selectGame = document.querySelector('.screen-title');
 var gameBoard = document.querySelector('.game-board');
 var chooseWeapon = document.querySelector('.choose-your-weapon');
