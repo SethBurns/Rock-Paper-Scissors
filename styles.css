@@ -65,10 +65,18 @@ h3 {
   border-radius: 20px;
 }
 
+.classic:hover {
+  background-color:rgb(8, 72, 38)
+}
+
 .advanced {
   margin-top: 15px;
   height: 50%;
   border-radius: 20px;
+}
+
+.advanced:hover {
+  background-color: rgb(96, 32, 32);
 }
 
 .game-title {
@@ -94,9 +102,7 @@ h3 {
 
 .picture {
   height: 50%;
-  padding-top: 15px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 15px 20px
 }
 
 .avatar {
@@ -137,24 +143,24 @@ h3 {
 .classic-game,
 .advanced-game {
   height: 100%;
-  width: 45%;
+  width: 50%;
 }
 
 .advanced-game {
   height: 70%;
 }
 
-.classic:hover {
-  background-color:rgb(8, 72, 38)
-}
-
-.advanced:hover {
-  background-color: rgb(96, 32, 32);
+.advanced-choice-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  height: 70%;
 }
 
 .boulder,
 .parchment,
-.shears,
+.sword,
 .dragon,
 .wizard {
   background-color: rgba(232, 162, 11, 0.2);
@@ -177,4 +183,15 @@ h3 {
 
 .hidden {
   display: none;
+}
+
+.mute {
+  height: 5%;
+  position: absolute;
+  background-color: chocolate;
+  font-size: 15px;
+  margin: 3px;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
 }
