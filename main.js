@@ -255,7 +255,7 @@ function playAudio() {
     rock.volume = 0.1;
     rock.play();
   } else if (game.currentWinner === 'dragon') {
-    dragon.volume = 0.15;
+    dragon.volume = 0.2;
     dragon.play();
   } else {
     wizard.volume = 0.1;
