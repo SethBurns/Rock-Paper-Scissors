@@ -154,7 +154,18 @@ function checkForDraw(playerChoice, computerChoice) {
   return playerChoice === computerChoice;
 }
 
-// Explain this function/maybe refactor//
+/* This function uses the decider variable to know how many
+options each other choice can beat. The arrays of options are
+ordered so that each index position beats the following 'decider'
+options. In a 5 option game, decider is 2, which is how many each
+weapon can beat. The first if statement compares index positions using
+the decider variable to figure out if it wins against another position
+or not. This will work with any odd number of weapon options as long
+as the array is ordered so that each index position beats the following
+'decider number' of options. If the player picks an index position higher
+than the halfway point, the decider number is used to manipulate the math
+so this function still works.
+*/
 function checkWhoWon(playerChoice, computerChoice) {
   var playerIndex = game.options.indexOf(playerChoice);
   var computerIndex = game.options.indexOf(computerChoice);
